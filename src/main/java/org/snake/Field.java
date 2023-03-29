@@ -13,7 +13,15 @@ public class Field {
         this.snake = snake;
     }
 
+    public Pickup getPickup() {
+        return pickup;
+    }
 
+    public void setPickup(Pickup pickup) {
+        this.pickup = pickup;
+    }
+
+    private Pickup pickup;
 
     public Field(int size) {
         Field.size = size;
@@ -30,7 +38,7 @@ public class Field {
         }
 
         // Add pickup to field
-        field[Pickup.location.y][Pickup.location.x] = 2;
+        field[pickup.location.y][pickup.location.x] = 2;
 
         // Padding between last frame
         for (int i = 0; i < 11; i++) {

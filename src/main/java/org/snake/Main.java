@@ -12,15 +12,10 @@ public class Main {
         InputManager input = new InputManager();
         input.start();
 
-        // The pickup which grows the snake and gives you points
-        Pickup pickup = new Pickup();
-
-        // The snake, which is made of multiple SnakeParts
-        Snake snake = new Snake();
-
         // Playfield with a configurable size
         Field field = new Field(32);
-        field.setSnake(snake);
+        field.setSnake(new Snake());
+        field.setPickup(new Pickup());
 
         while (true) {
             // Print out the field and the current score
@@ -31,8 +26,8 @@ public class Main {
             TimeUnit.MILLISECONDS.sleep(300);
 
             // Move based on the most recent direction
-            snake.move(input.getDir());
-            if (snake.checkSelfCollission(snake.getHead().getLocation())) {
+            field.getSnake().move(input.getDir());
+            if (field.getSnake().checkSelfCollission(field.getSnake().getHead().getLocation())) {
                 break;
             };
         }
