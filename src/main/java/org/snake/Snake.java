@@ -33,8 +33,14 @@ public class Snake {
         if (next_loc.equals(Pickup.location)) {
             increase_length(dir);
 
-            // Update pickup position
-            Pickup.setPos();
+            // Update pickup position, ensure it doesn't collide with snake
+            while (true) {
+                Location pickupLocation = Pickup.setPos();
+                if (!checkCollission(pickupLocation)) {
+                    break;
+                }
+            }
+
         } else {
             // Cycle through linked list
             // The head always has the back of the snake as the next part
@@ -66,11 +72,20 @@ public class Snake {
 
 
     // Checks if snake collides with itself based on the head position
-    public boolean checkCollission(Location location) {
+    public boolean checkSelfCollission(Location location) {
         for (SnakePart part : parts) {
             if (part.equals(head)) {
                 continue;
             }
+            if (part.getLocation().equals(location)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkCollission(Location location) {
+        for (SnakePart part : parts) {
             if (part.getLocation().equals(location)) {
                 return true;
             }

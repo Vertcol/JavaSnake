@@ -21,7 +21,7 @@ public class SnakeTests {
 
 
         Snake snake = new Snake();
-        assertFalse(snake.checkCollission(snake.getHead().getLocation()));
+        assertFalse(snake.checkSelfCollission(snake.getHead().getLocation()));
 
         // Make snake collide with itself
         snake.increase_length(Direction.RIGHT);
@@ -29,6 +29,22 @@ public class SnakeTests {
         snake.increase_length(Direction.LEFT);
         snake.increase_length(Direction.DOWN);
 
-        assertTrue(snake.checkCollission(snake.getHead().getLocation()));
+        assertTrue(snake.checkSelfCollission(snake.getHead().getLocation()));
     }
+
+    @Test
+    public void pickup_collission() {
+        // Create field, locations rely on field size
+        Field field = new Field(8);
+
+        // Pickup shouldn't collide with snake at start
+        Snake snake = new Snake();
+        Pickup pickup = new Pickup();
+        assertFalse(snake.checkCollission(Pickup.getLocation()));
+
+        // Move pickup to head position
+        Pickup.setLocation(new Location(1,1));
+        assertTrue(snake.checkCollission(Pickup.getLocation()));
+    }
+
 }

@@ -32,7 +32,7 @@ public class Main {
 
             // Move based on the most recent direction
             snake.move(input.getDir());
-            if (snake.checkCollission(snake.getHead().getLocation())) {
+            if (snake.checkSelfCollission(snake.getHead().getLocation())) {
                 break;
             };
         }
