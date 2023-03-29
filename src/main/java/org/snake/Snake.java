@@ -1,7 +1,9 @@
-package org.example;
+package org.snake;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.snake.Direction.*;
 
 public class Snake {
     public SnakePart getHead() {
@@ -25,21 +27,11 @@ public class Snake {
     public void move(Direction dir) {
 
         // Get new location based on input
-        Location new_loc = new Location(1,1);
-        switch (dir) {
-            case UP -> new_loc = new Location(this.head.getLocation().x, this.head.getLocation().y - 1);
-            case DOWN -> new_loc = new Location(this.head.getLocation().x % Field.size, this.head.getLocation().y + 1);
-            case LEFT -> new_loc = new Location(this.head.getLocation().x - 1 % Field.size, this.head.getLocation().y);
-            case RIGHT -> new_loc = new Location(this.head.getLocation().x + 1 % Field.size, this.head.getLocation().y);
-        }
+        Location next_loc = next_location(dir);
 
         // Check if pickup is touched
-        if (new_loc.equals(Pickup.location)) {
-            // Create a new snake part and place it between the head and its next part
-            SnakePart new_head = new SnakePart(new_loc,head.getNextPart());
-            head.setNextPart(new_head);
-            parts.add(new_head);
-            head = new_head;
+        if (next_loc.equals(Pickup.location)) {
+            increase_length(dir);
 
             // Update pickup position
             Pickup.setPos();
@@ -47,9 +39,31 @@ public class Snake {
             // Cycle through linked list
             // The head always has the back of the snake as the next part
             head = head.getNextPart();
-            head.setLocation(new_loc);
+            head.setLocation(next_loc);
         }
     }
+
+    public Location next_location(Direction dir) {
+        Location new_loc = new Location(1,1);
+        switch (dir) {
+            case UP -> new_loc = new Location(this.head.getLocation().x, this.head.getLocation().y - 1);
+            case DOWN -> new_loc = new Location(this.head.getLocation().x, this.head.getLocation().y + 1);
+            case LEFT -> new_loc = new Location(this.head.getLocation().x - 1, this.head.getLocation().y);
+            case RIGHT -> new_loc = new Location(this.head.getLocation().x + 1, this.head.getLocation().y);
+        }
+        return new_loc;
+    }
+
+    public void increase_length(Direction dir) {
+        Location location = next_location(dir);
+        // Create a new snake part and place it between the head and its next part
+        SnakePart new_head = new SnakePart(location,head.getNextPart());
+        head.setNextPart(new_head);
+        parts.add(new_head);
+        head = new_head;
+    }
+
+
 
     // Checks if snake collides with itself based on the head position
     public boolean checkCollission(Location location) {

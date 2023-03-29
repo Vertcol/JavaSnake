@@ -1,4 +1,4 @@
-package org.example;
+package org.snake;
 
 
 import org.jline.terminal.Terminal;

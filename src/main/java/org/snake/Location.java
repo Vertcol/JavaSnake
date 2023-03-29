@@ -1,4 +1,4 @@
-package org.example;
+package org.snake;
 
 public class Location {
     public int x;

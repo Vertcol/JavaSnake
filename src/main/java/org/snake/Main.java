@@ -1,4 +1,4 @@
-package org.example;
+package org.snake;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +19,7 @@ public class Main {
         Snake snake = new Snake();
 
         // Playfield with a configurable size
-        Field field = new Field(8);
+        Field field = new Field(32);
         field.setSnake(snake);
 
         while (true) {

@@ -1,4 +1,4 @@
-package org.example;
+package org.snake;
 import java.util.concurrent.ThreadLocalRandom;
 public class Pickup {
     public static Location location;
