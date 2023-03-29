@@ -20,15 +20,19 @@ public class Field {
         field = new int[size][size];
     }
     public void render() {
+        // Clear field
         field = new int[size][size];
 
+        // Add snake to field
         for (SnakePart snakePart: snake.getParts()) {
             Location loc = snakePart.getLocation();
             field[loc.y][loc.x] = 1;
         }
 
+        // Add pickup to field
         field[Pickup.location.y][Pickup.location.x] = 2;
 
+        // Padding between last frame
         for (int i = 0; i < 11; i++) {
             System.out.println();
         }
@@ -36,11 +40,11 @@ public class Field {
         for (int[] line: field) {
             for (int part: line) {
                 if (part == 0) {
-                    System.out.print("  ");
+                    System.out.print("  "); // Empty space (0)
                 } else if (part == 1) {
-                    System.out.print("██");
+                    System.out.print("██"); // Snake part (1)
                 } else if (part == 2) {
-                    System.out.print("░░");
+                    System.out.print("░░"); // Pickup (2)
                 }
             }
             System.out.println();

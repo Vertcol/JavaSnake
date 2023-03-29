@@ -9,10 +9,12 @@ public class Location {
         this.y = inside_bounds(y);
     }
 
+    // Checks if location matches
     public boolean equals(Location obj) {
         return this.x == obj.x && this.y == obj.y;
     }
 
+    // Forces all coordinates to stay inside field bounds
     public int inside_bounds(int location) {
         if (location < 0) {
             return Field.size - 1;
