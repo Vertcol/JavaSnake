@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="portfolio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/portfolio_jar</output-path>
+    <root id="archive" name="portfolio.jar">
+      <element id="module-output" name="portfolio" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jline/jline/3.23.0/jline-3.23.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

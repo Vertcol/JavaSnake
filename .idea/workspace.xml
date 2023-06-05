@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25dc3cd1-40ec-4be9-8098-b3d15e498619" name="Changes" comment="Change associations">
+    <list default="true" id="25dc3cd1-40ec-4be9-8098-b3d15e498619" name="Changes" comment="Fix pom.xml for Jline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/snake/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/snake/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1680592168841" duration="2696000" />
       <workItem from="1683629964787" duration="138000" />
       <workItem from="1683653745632" duration="422000" />
-      <workItem from="1685961704291" duration="304000" />
+      <workItem from="1685961704291" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="Git init">
       <created>1680087773973</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680116998152</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix pom.xml for Jline">
+      <created>1685962365091</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685962365091</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +165,8 @@
     <MESSAGE value="Add collission test and seperate code in functions" />
     <MESSAGE value="Add pickup collission test" />
     <MESSAGE value="Change associations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change associations" />
+    <MESSAGE value="Fix pom.xml for Jline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix pom.xml for Jline" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
