@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25dc3cd1-40ec-4be9-8098-b3d15e498619" name="Changes" comment="Add pickup collission test">
+    <list default="true" id="25dc3cd1-40ec-4be9-8098-b3d15e498619" name="Changes" comment="Change associations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/snake/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/snake/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/snake/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/snake/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,13 +27,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -54,18 +46,43 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/jorlap&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jorlap/IdeaProjects/portfolio&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3275862&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager" selected="Application.Game">
+    <configuration name="Game" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.snake.Main" />
+      <module name="portfolio" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SnakeTests" type="JUnit" factoryName="JUnit">
+      <module name="portfolio" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SnakeTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <dir value="$PROJECT_DIR$/src/test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Game" />
+      <item itemvalue="JUnit.SnakeTests" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +93,12 @@
       <updated>1680033536121</updated>
       <workItem from="1680033537190" duration="18860000" />
       <workItem from="1680087596544" duration="10738000" />
-      <workItem from="1680110122852" duration="4031000" />
+      <workItem from="1680110122852" duration="4667000" />
+      <workItem from="1680167392584" duration="1655000" />
+      <workItem from="1680592168841" duration="2696000" />
+      <workItem from="1683629964787" duration="138000" />
+      <workItem from="1683653745632" duration="422000" />
+      <workItem from="1685961704291" duration="304000" />
     </task>
     <task id="LOCAL-00001" summary="Git init">
       <created>1680087773973</created>
@@ -106,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680109963614</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change associations">
+      <created>1680116998152</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680116998152</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +158,8 @@
     <MESSAGE value="Add comments to code" />
     <MESSAGE value="Add collission test and seperate code in functions" />
     <MESSAGE value="Add pickup collission test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add pickup collission test" />
+    <MESSAGE value="Change associations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change associations" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

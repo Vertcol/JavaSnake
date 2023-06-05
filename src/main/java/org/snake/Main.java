@@ -13,7 +13,7 @@ public class Main {
         input.start();
 
         // Playfield with a configurable size
-        Field field = new Field(32);
+        Field field = new Field(8);
         field.setSnake(new Snake());
         field.setPickup(new Pickup());
 
